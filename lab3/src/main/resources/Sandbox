@@ -1,0 +1,53 @@
+package test;
+
+import com.codeborne.selenide.SelenideElement;
+import component.DateField;
+import org.apache.commons.exec.OS;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
+import org.openqa.selenium.By;
+import org.testng.annotations.Test;
+
+import java.util.Map;
+
+import static core.ApplicationManager.findButton;
+import static core.ApplicationManager.setValueForInputBasedField;
+import static core.AuthHelper.reLoginAsUser;
+import static com.codeborne.selenide.Selenide.$;
+
+public class Sandbox extends WorkspaceTest {
+
+//    public void setDate(String inputText){
+//        try {
+//            DateTimeFormatter formatter = DateTimeFormat.forPattern(pattern);
+//            DateTime dt = formatter.parseDateTime(inputText);
+//            SelenideElement e = $(By.id(":relation/effective-to")).find("input");
+//            String plhldr = e.getAttribute("placeholder");
+//            String data = formatter.print(dt);
+//            setValueForInputBasedField(":relation/effective-to", data);
+//        } catch (Exception e){
+//            e.printStackTrace();
+//        }
+//    }
+
+    @Test()
+    public void sandboxTest() {
+//        Map<String,String> newUserMap = registerRandomUser();
+//        reLoginAsUser(newUserMap.get("login"),newUserMap.get("password"));
+//        Map<String, String> newBe = initiateBeRegistration();
+//        reLoginAsUser(newUserMap.get("login"),newUserMap.get("password"),newBe.get("nameBe"));
+        reLoginAsUser("user1","pass","BE001");
+        navigator.openRelations();
+        findButton("NEW").click();
+        $(".form-control.focusable.position-absolute").click();
+        $(".selector-text").click();
+//        String pattern = "YYYY/MM/DD";
+        String inputString = "2000/11/11";
+        DateField df = new DateField(":relation/effective-to");
+        df.setDate("hello darkness");
+        df.setDatePaste("February 01 2019");
+
+    }
+}
+
