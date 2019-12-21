@@ -68,19 +68,20 @@ public class lab4 {
                     LocalTime finishTime = (LocalTime) appInfo.get(1);
                     for (int i = 0; i < gaps.size(); i++) {
                         ArrayList<LocalTime> currentGap = gaps.get(i);
-                        if (currentGap.get(0).compareTo(startTime) == -1 && currentGap.get(1).compareTo(startTime) == 1) {
-                            Map<String, Long> appMap = new HashMap<String, Long>(){{
-                                put(app, startTime.until(currentGap.get(1), MINUTES));
-                            }};
+                        if (currentGap.get(0).isBefore(startTime) && (currentGap.get(1).isAfter(startTime) || currentGap.get(1).getHour() == 0)) {
+                            Map<String, Long> appMap = new HashMap<String, Long>();
+                            if (currentGap.get(1).isAfter(finishTime) || currentGap.get(1).getHour() == 0) {
+                                appMap.put(app, startTime.until(finishTime, MINUTES));
+                            } else {
+                                appMap.put(app, startTime.until(currentGap.get(1), MINUTES));
+                            }
                             Map<String, Map<String, Long>> workMap = new HashMap<String, Map<String, Long>>(){{
                                 put(workType, appMap);
                             }};
+                            if (comparison.get(currentGap) != null){
+                                workMap.putAll(comparison.get(currentGap));
+                            }
                             comparison.put(currentGap, workMap);
-//                            comparison.put(currentGap, new HashMap<String, Map<String, Long>>() {{
-//                                put(workType, new HashMap<String, Long>() {{
-//                                    put(app, startTime.until(currentGap.get(1), MINUTES));
-//                                }});
-//                            }});
                             for (int j = i; j < gaps.size(); j++) {
                                 ArrayList<LocalTime> secondCurrentGap = gaps.get(j);
                                 if (secondCurrentGap.get(0).compareTo(finishTime) == -1 && secondCurrentGap.get(1).compareTo(finishTime) == 1) {
@@ -88,41 +89,15 @@ public class lab4 {
                                         Long hours = currentGap.get(1).until(secondCurrentGap.get(0), HOURS);
                                         for (int k = 0; k < hours; k++) {
                                             ArrayList<LocalTime> gapToAdd = gaps.get(i + k + 1);
-
-
-
-
-
-
-
-
-
-
-
                                             comparison.put(gapToAdd, new HashMap<String, Map<String, Long>>() {{
                                                 put(workType, new HashMap<String, Long>() {{
                                                     put(app, 60L);
                                                 }});
                                             }});
                                         }
-
-
-
-
-
-
-
-
                                         comparison.put(secondCurrentGap, new HashMap<String, Map<String, Long>>() {{
                                             put(workType, new HashMap<String, Long>() {{
                                                 put(app, secondCurrentGap.get(0).until(finishTime, MINUTES));
-                                            }});
-                                        }});
-                                    } else {
-                                        Long prevMins = comparison.get(currentGap).get(workType).get(app);
-                                        comparison.put(currentGap, new HashMap<String, Map<String, Long>>() {{
-                                            put(workType, new HashMap<String, Long>() {{
-                                                put(app, prevMins + currentGap.get(0).until(finishTime, MINUTES));
                                             }});
                                         }});
                                     }
@@ -133,21 +108,18 @@ public class lab4 {
                 }
             }
         }
-        System.out.println(comparison);
         return comparison;
     }
 
     private static long getMinuteDuration(LocalTime t) {
         long h = t.getHour();
         long m = t.getMinute();
-//        long s = t.getSecond();
-//        return  (h * 3600) + (m * 60) + s;
         return (h * 60) + m;
     }
 
     public static void main(String[] args) throws IOException {
         final ArrayList<LocalTime> timestaps = new ArrayList<LocalTime>();
-        for (int i = 0; i < 24; i++) {
+        for (int i = 0; i < 25; i++) {
             if (i < 10) {
                 timestaps.add(LocalTime.parse("0" + i + ":00", DateTimeFormatter.ofPattern("HH:mm")));
             } else {
@@ -162,10 +134,6 @@ public class lab4 {
                 add(timestaps.get(finalI + 1));
             }});
         }
-        timeGaps.add(new ArrayList<LocalTime>() {{
-            add(timestaps.get(timestaps.size() - 1));
-            add(timestaps.get(0));
-        }});
         String s;
         Process p;
         try {
@@ -210,21 +178,18 @@ public class lab4 {
                                     ArrayList<Object> output = new ArrayList<Object>() {{
                                         add(finalStarttime);
                                         add(finalWorktime);
-//                                        add(processStaus);
                                     }};
                                     Map<String, ArrayList<ArrayList<Object>>> innerMap = categories.get(workType);
                                     ArrayList<ArrayList<Object>> innerArraay = innerMap.get(app);
                                     innerArraay.add(output);
                                     innerMap.put(app, innerArraay);
                                     categories.put(workType, innerMap);
-//                                    System.out.println(output);
                                 } catch (Exception e) {
                                     continue;
                                 }
                             }
                         }
                     }
-//                    System.out.println(s);
                 }
             p.waitFor();
             for (String workType : categories.keySet()) {
@@ -268,16 +233,10 @@ public class lab4 {
                     }
                 }
             }
-            countGap(timeGaps, categories);
-
-//            System.out.println(categories);
-            System.out.println("exit: " + p.exitValue());
+            System.out.println(countGap(timeGaps, categories));
             p.destroy();
 
         } catch (Exception e) {
         }
     }
 }
-
-
-//    add(finalmintime.plus(finalmintime.until(finalmaxtime, SECONDS), SECONDS));
