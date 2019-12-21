@@ -1,30 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a5d9149-c917-4767-bbcc-a1ca50dd77f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$12.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$13.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$3$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$4$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$5$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$5$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$6$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lab4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lab4.class" afterDir="false" />
-    </list>
+    <list default="true" id="6a5d9149-c917-4767-bbcc-a1ca50dd77f1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -110,7 +87,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="5">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="960" />
     <option name="y" value="27" />
     <option name="width" value="960" />
@@ -157,7 +134,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../clojure/cobra_for_commit/rigel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab3" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -228,8 +205,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="960" y="27" width="960" height="1053" extended-state="5" />
-    <editor active="true" />
+    <frame x="960" y="27" width="960" height="1053" extended-state="4" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.28884026" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />

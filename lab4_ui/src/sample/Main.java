@@ -87,7 +87,7 @@ public class Main extends Application {
         Object rightDate = (Object) "";
 
         for (Object key: db.keySet()){
-            if (LocalDate.parse((String) key, DateTimeFormatter.ofPattern("yyyy/MM/dd")).equals(date)){
+            if (LocalDate.parse((String) key, DateTimeFormatter.ofPattern("yyyy-MM-dd")).equals(date)){
                 isCurrentDate = true;
                 rightDate = key;
             }
@@ -146,7 +146,6 @@ public class Main extends Application {
                 }
             }
         }
-
 
 
         if (scene == null && isCurrentDate) {

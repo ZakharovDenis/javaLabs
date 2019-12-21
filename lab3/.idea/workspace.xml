@@ -1,7 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="48785fe5-67c4-4ce7-b403-aad72993e25f" name="Default Changelist" comment="" />
+    <list default="true" id="48785fe5-67c4-4ce7-b403-aad72993e25f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/UserHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lab3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_ui/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/database.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/FullCalendarView.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/FullCalendarView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$13$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$13$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$13$2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$13$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$14$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$14$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$14$2$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$14$2$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$14$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_ui/out/production/lab4_ui/sample/timeHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/src/sample/FullCalendarView.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_ui/src/sample/FullCalendarView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_ui/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../lab4_ui/src/sample/timeHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../lab4_ui/src/sample/timeHandler.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab3.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1590">
-              <caret line="106" selection-start-line="106" selection-end-line="106" />
+            <state relative-caret-position="-1420">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,6 +73,14 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>threa</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -53,11 +89,12 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="27" />
     <option name="width" value="960" />
     <option name="height" value="1053" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -97,7 +134,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lab1.1" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -157,7 +195,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.106723584" />
@@ -200,8 +238,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lab3.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1590">
-          <caret line="106" selection-start-line="106" selection-end-line="106" />
+        <state relative-caret-position="-1420">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

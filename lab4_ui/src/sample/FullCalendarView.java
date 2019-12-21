@@ -8,9 +8,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.YearMonth;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 
 
 public class FullCalendarView {
@@ -78,6 +83,17 @@ public class FullCalendarView {
         while (!calendarDate.getDayOfWeek().toString().equals("MONDAY") ) {
             calendarDate = calendarDate.minusDays(1);
         }
+
+        HashMap db = new HashMap();
+        try {
+            ObjectInputStream objectInputStream = new ObjectInputStream(
+                    new FileInputStream("database.out"));
+            db = (HashMap) objectInputStream.readObject();
+            objectInputStream.close();
+        } catch (Exception e){
+            System.out.println(e);
+        }
+
         // Populate the calendar with day numbers
         for (AnchorPaneNode ap : allCalendarDays) {
             if (ap.getChildren().size() != 0) {
@@ -87,6 +103,11 @@ public class FullCalendarView {
             ap.setDate(calendarDate);
             ap.setTopAnchor(txt, 5.0);
             ap.setLeftAnchor(txt, 5.0);
+            if (db.containsKey(calendarDate.toString())){
+                ap.setStyle("-fx-background-color: #faff91;");
+            }
+
+
             ap.getChildren().add(txt);
             calendarDate = calendarDate.plusDays(1);
         }

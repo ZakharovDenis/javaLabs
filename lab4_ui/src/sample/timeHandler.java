@@ -4,7 +4,6 @@ import jdk.nashorn.internal.parser.JSONParser;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -23,6 +22,7 @@ public class timeHandler {
     private static Map<String, Map<String, ArrayList<ArrayList<Object>>>> categories = new HashMap<String, Map<String, ArrayList<ArrayList<Object>>>>() {{
         put("Work", new HashMap<String, ArrayList<ArrayList<Object>>>() {{
             put("Intellij", new ArrayList<ArrayList<Object>>());
+            put("libexec", new ArrayList<ArrayList<Object>>());
         }});
         put("Browsing", new HashMap<String, ArrayList<ArrayList<Object>>>() {{
             put("Chrome", new ArrayList<ArrayList<Object>>());
@@ -241,55 +241,21 @@ public class timeHandler {
 
             Map<ArrayList<LocalTime>, Map<String, Map<String, Long>>> map= countGap(timeGaps, categories);
 
-            ObjectInputStream objectInputStream = new ObjectInputStream(
+            HashMap db = new HashMap();
+            try {
+                ObjectInputStream objectInputStream = new ObjectInputStream(
                     new FileInputStream("database.out"));
-            HashMap db = (HashMap) objectInputStream.readObject();
-            objectInputStream.close();
+                db = (HashMap) objectInputStream.readObject();
+                objectInputStream.close();
+            } catch (Exception e){
+                System.out.println(e);
+            }
 
-
-            String currentDate = new SimpleDateFormat("yyyy/MM/dd").format(new Date());
-
-            HashMap today = new HashMap<Object, Object>(){{
-                put(currentDate , map);
-            }};
+            String currentDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 
             if (db.get(currentDate) != null) {
                 HashMap dayToWrite = (HashMap) db.get(currentDate);
                 dayToWrite.putAll(map);
-
-
-                dayToWrite.putAll(new HashMap(){{
-                    put((Object) new ArrayList<LocalTime>(){{
-                        add(LocalTime.parse("00:00", DateTimeFormatter.ofPattern("HH:mm")));
-                        add(LocalTime.parse("01:00", DateTimeFormatter.ofPattern("HH:mm")));
-                    }}, new HashMap(){{
-                        put("Browsing", new HashMap(){{
-                            put("Chrome", 35L);
-                        }});
-                        put("Work", new HashMap(){{
-                            put("Intellij", 25L);
-                        }});
-                    }});
-                }});
-
-                dayToWrite.putAll(new HashMap(){{
-                    put((Object) new ArrayList<LocalTime>(){{
-                        add(LocalTime.parse("01:00", DateTimeFormatter.ofPattern("HH:mm")));
-                        add(LocalTime.parse("02:00", DateTimeFormatter.ofPattern("HH:mm")));
-                    }}, new HashMap(){{
-                        put("Messaging", new HashMap(){{
-                            put("Telegram", 35L);
-                        }});
-                        put("Work", new HashMap(){{
-                            put("Intellij", 25L);
-                        }});
-                        put("Browsing", new HashMap(){{
-                            put("Intellij", 15L);
-                        }});
-                    }});
-                }});
-
-
                 db.put(currentDate, dayToWrite);
             } else {
                 db.put(currentDate, map);
